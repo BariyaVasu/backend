@@ -4,7 +4,7 @@ const app = express();
 const port = 9000;
 
 app.use(cors({
-    origin: "https://frontend-ruby-seven-36.vercel.app/",
+    origin: "https://frontend-ruby-seven-36.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
