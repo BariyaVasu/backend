@@ -3,10 +3,21 @@ import cors from "cors"
 const app = express();
 const port = 9000;
 
+
+const allowOrigin = ["https://frontend-ruby-seven-36.vercel.app"];
 app.use(cors({
-    origin: "https://frontend-ruby-seven-36.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
+    origin: function (orign, callback) {
+        if (!origin || allowOrigin.includes(orign)) {
+            callback(null, true);
+        } else{
+            callback(new error("Not Alllowed By Cors"));
+            
+        }
+    },
+    methods :["GET", "POST", "DELETE", "PUT"],
+    Credential:true,
+
+
 }));
 
 
