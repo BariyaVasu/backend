@@ -6,8 +6,8 @@ const port = 9000;
 
 const allowOrigin = ["https://frontend-ruby-seven-36.vercel.app"];
 app.use(cors({
-    origin: function (orign, callback) {
-        if (!origin || allowOrigin.includes(orign)) {
+    origin: function (origin, callback) {
+        if (!origin || allowOrigin.includes(origin)) {
             callback(null, true);
         } else{
             callback(new error("Not Alllowed By Cors"));
